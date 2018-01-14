@@ -1,5 +1,39 @@
-h1 {
-  color: red;
+$grey-default: #f3f3f3;
+$header-height: 70px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: Helvetica;
+}
+
+hr {
+  margin: 40px;
+  border-color: $grey-default;
+  border-style: solid;
+}
+
+ul {
+  margin: 40px;
+}
+
+.main-wrapper,
+.header__inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  padding: ($header-height + 30px) 30px;
 }
 
 .foo {
@@ -9,7 +43,6 @@ h1 {
     display: block;
     text-align: center;
     color: black;
-    outline: 1px solid red;
   }
 }
 
@@ -36,7 +69,38 @@ h1 {
   }
 }
 
+.article {
+  margin: 10px;
+  padding: 50px;
+  border: 1px solid $grey-default;
+  border-radius: 3px;
+
+  p {
+    margin: 20px 0;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  padding: 10px 30px;
+  background-color: white;
+  border-bottom: 1px solid $grey-default;
+}
+
 .footer {
+  height: 100px;
   color: white;
-  background-color: black;
+  background-color: #3a3a3a;
+}
+
+.list-authors {
+  list-style: none;
+
+  &__item {
+    padding: 0;
+  }
 }

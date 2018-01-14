@@ -10,7 +10,8 @@ html
       console.log(myVar);
     include mixins/mixins.pug
   body
-    div
+    include header.pug
+    main.main-wrapper
       p Hola
       p mundo!
       
@@ -20,20 +21,75 @@ html
       
       p.
         Probando a usar el . antes de añadir contenido
+      
+      hr
         
       a.link(href='#', target='_blank') About us
       
-    .l-flex-center
-      button.btn holaa
-      button.btn.btn--primary Prueba
-    +list
-    ul
-      +pet('gato')
-      +pet('perro')
-      +pet('cerdo')
+      hr
       
-    +article('Articulo #1')
-    +article('Articulo #2')
-      p Contenido del articulo. Todo este texto se ha pasado por un mixin block
-    
+      .l-flex-center
+        button.btn holaa
+        button.btn.btn--primary Prueba
+      
+      hr
+        
+      +list
+      
+      hr
+        
+      ul
+        +pet('gato')
+        +pet('perro')
+        +pet('cerdo')
+      
+      hr
+        
+      +article('Articulo #1')
+      +article('Articulo #2')
+        p Contenido del articulo. Todo este texto se ha pasado por un mixin block
+        
+      hr
+        
+      - var literal = 'Hola Hector';
+      p= literal
+        
+      ul
+        - for (var x = 0; x < 3; x++)
+          li item
+        
+      -
+        var list = [
+          'Uno',
+          'Dos',
+          'Tres',
+          'Cuatro',
+          'Cinco',
+          'Seis'
+        ]
+      ul
+        each item in list
+          li= item
+      
+      - 
+        var map = { 
+          title: 'Titulo', 
+          authors: [
+            'Héctor', 
+            'Jon', 
+            'Alain'
+          ],
+          message: '<strong>Strong</strong>'
+        }
+      p= map.title
+      ul.list-authors
+        each name in map.authors
+          li.list-authors__item= name
+      p 
+        != map.message
+      - var n = 0;
+      ul
+        while n < 4
+          li= n++
+      
     include footer.pug
