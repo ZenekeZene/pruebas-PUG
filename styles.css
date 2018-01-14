@@ -1,0 +1,44 @@
+/* line 1, Users/hvillar/Proyectos/pruebas PUG/styles.scss */
+h1 {
+  color: red; }
+
+/* line 7, Users/hvillar/Proyectos/pruebas PUG/styles.scss */
+.foo p {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: black;
+  outline: 1px solid red; }
+
+/* line 16, Users/hvillar/Proyectos/pruebas PUG/styles.scss */
+.l-flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+/* line 22, Users/hvillar/Proyectos/pruebas PUG/styles.scss */
+.btn {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5; }
+  /* line 28, Users/hvillar/Proyectos/pruebas PUG/styles.scss */
+  .btn:focus {
+    outline: 1px auto -webkit-focus-ring-color; }
+  /* line 32, Users/hvillar/Proyectos/pruebas PUG/styles.scss */
+  .btn--primary {
+    color: white;
+    background-color: green;
+    border: 1px solid #66cc64; }
+
+/* line 39, Users/hvillar/Proyectos/pruebas PUG/styles.scss */
+.footer {
+  color: white;
+  background-color: black; }
+/*# sourceMappingURL=styles.css.map */

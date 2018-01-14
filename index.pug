@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title Prueba
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="styles.css")
+    script(type='text/javascript').
+      var myVar = 'Hello var';
+      console.log(myVar);
+    include mixins/mixins.pug
+  body
+    div
+      p Hola
+      p mundo!
+      
+      p
+        | Probando a usar el pipe (|) antes de añadir contenido.
+        | Otra linea
+      
+      p.
+        Probando a usar el . antes de añadir contenido
+        
+      a.link(href='#', target='_blank') About us
+      
+    .l-flex-center
+      button.btn holaa
+      button.btn.btn--primary Prueba
+    +list
+    ul
+      +pet('gato')
+      +pet('perro')
+      +pet('cerdo')
+      
+    +article('Articulo #1')
+    +article('Articulo #2')
+      p Contenido del articulo. Todo este texto se ha pasado por un mixin block
+    
+    include footer.pug

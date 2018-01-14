@@ -1,0 +1,42 @@
+h1 {
+  color: red;
+}
+
+.foo {
+
+  p {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: black;
+    outline: 1px solid red;
+  }
+}
+
+.l-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+
+  &:focus {
+    outline: 1px auto -webkit-focus-ring-color;
+  }
+
+  &--primary {
+    color: white;
+    background-color: green;
+    border: 1px solid #66cc64;
+  }
+}
+
+.footer {
+  color: white;
+  background-color: black;
+}
