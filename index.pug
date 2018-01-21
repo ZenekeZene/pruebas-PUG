@@ -5,13 +5,41 @@ html
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="styles.css")
+    link(rel="stylesheet", href="vendor/prism.css")  
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css")
+    script(type='text/javascript', src="/vendor/prism.js")  
     script(type='text/javascript').
       var myVar = 'Hello var';
       console.log(myVar);
     include mixins/mixins.pug
   body
     include header.pug
+    
     main.main-wrapper
+      h2 Texto plano
+      p 4 maneras de tratar el texto plano
+      h3 En línea:
+      p 
+        | La manera más fácil de añadir texto plano es en línea.
+        | El primero elemento en línea es el tag en si mismo.
+        | Todo lo que vaya despues del tag y un espacio será el contenido del texto del mismo.
+        | Ideal para textos cortos.
+      
+      pre
+        code.language-css.
+          p { 
+            color: red;
+          }
+          
+      pre
+        code.language-pug.
+          p Hola
+        
+      script(type="text/plain", class="language-markup")
+        <p>Hola</p>
+      
+      label(for="toogle-1") Label
+      input(type="checkbox", id="toogle-1")
       p Hola
       p mundo!
       
